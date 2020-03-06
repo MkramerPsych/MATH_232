@@ -12,3 +12,6 @@ Max Kramer, Spring 2020
 
 ### Week 3: Linear Dependence
 - Includes : Week3Problem1.m
+
+### Week 4: Introduction To Graphing
+- Includes : Week4Problem1.m, Week4Problem2.m, Week4Problem3.m
