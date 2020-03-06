@@ -20,6 +20,7 @@ rref(A)
 %%
 % _*Based on the above result, how many pivots does A have?*_
 
+%%
 % Based on the above results, A appears to have 2 pivots as the row reduced form of A contains two pivots. 
 
 %%
@@ -28,6 +29,7 @@ rref(A)
 B=subs(A,a,2)
 rref(B)
 
+%%
 % By substituting in a value for a in the matrix A, the row reduced form of B only contains 1 pivot. 
 
 %%
@@ -41,4 +43,5 @@ C(2,:) = C(2,:) - a*C(1,:)
 % to the question: how many pivots does A have?*
 % (Your answer will depend on a.)_
 
-% The first step was copying the matrix A to a new matrix C. Then, a row operation was performed in which the 2nd row was replaced by itself plus -a * the 1st row. If a value for a is seclclected that results in -a^2+a+2 is zero (a=2), then there is only one pivot. If an a is selected that causes -a^2+a+2 to be nonzero, than the matrix A has two pivots. 
+%%
+% The first step was copying the matrix A to a new matrix C. Then, a row operation was performed in which the 2nd row was replaced by itself plus -a * the 1st row. If a value for a is selected that results in -a^2+a+2 is zero (a=2,a=-1), then there is only one pivot. If an a is selected that causes -a^2+a+2 to be nonzero, than the matrix A has two pivots. 

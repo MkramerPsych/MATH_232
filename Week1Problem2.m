@@ -49,6 +49,7 @@ C = zeros(10) % Sean told us in Discord to Google "MATLAB zeros", and that helpe
 
 D = ones(9,4)
 
+%%
 % The ones(r,c) command creates a matrix of dimensions (r,c) of all ones.
 
 
@@ -57,6 +58,7 @@ D = ones(9,4)
 
 E = eye(7)
 
+%%
 % The eye(n) command creates an n x n identity matrix.
 
 
@@ -70,6 +72,7 @@ f2 = tril(F,-1);
 f3 = eye(9,7) * -1;
 F = f1 + f2 + f3
 
+%%
 % To create the matrix F, we begin with a matrix of 2s with 9 x 7
 % dimensions. This was done by multiplying a call to ones(r,c) by 2. Then,
 % the triu (upper triangle) and tril (lower triangle) submatricies were
@@ -85,6 +88,7 @@ F = f1 + f2 + f3
 
 G = randi(10,4,5) - 1
 
+%%
 % The randi(n,r,c) command creates an r x c matrix of uniformly drawn
 % random numbers in the range [1,n]. The [1:10] range is corrected to [0:9]
 % by subtracting 1 from all numbers in the matrix.
@@ -99,6 +103,7 @@ G = randi(10,4,5) - 1
 v = diag(G)
 diag(v)
 
+%%
 % The first line `v = diag(G)` returns a column vector of the diagonal
 % elements of the matrix G. The second line `diag(v)` creates a new matrix
 % where the elements of v are placed on the main diagonal.
@@ -114,6 +119,7 @@ H = [1 2 3 4; 5 6 7 8; 9 10 11 12]
 
 b = H(:,end)
 
+%%
 % To get all rows and the last column of a matrix, we call the matrix and
 % supply a : for all rows and then use `end` to get the last column.
 %%
@@ -121,5 +127,6 @@ b = H(:,end)
 
 J = vertcat(H,H)
 
+%%
 % The vertcat(n,m) command stacks n on top of m if n and m have compatible
 % sizes. 
