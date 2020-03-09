@@ -15,3 +15,6 @@ Max Kramer, Spring 2020
 
 ### Week 4: Introduction To Graphing
 - Includes : Week4Problem1.m, Week4Problem2.m, Week4Problem3.m
+
+### Week 5: Determinants
+- Includes : Week5Problem1.m, Week5Problem2.m, Week5Problem3.m
