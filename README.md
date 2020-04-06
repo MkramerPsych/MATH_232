@@ -18,3 +18,9 @@ Max Kramer, Spring 2020
 
 ### Week 5: Determinants
 - Includes : Week5Problem1.m, Week5Problem2.m, Week5Problem3.m
+
+### Week 6: Abstract Vector Spaces
+- Includes : Week6Problem1.m Week6Problem2.m, Week6Problem3.m
+
+### Week 9 : Dimensionality
+- Includes : Week9Problem1.m
