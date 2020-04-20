@@ -44,7 +44,9 @@ W_2 = [B; diff(B); diff(B,2);diff(B,3)];
 det(W_2)
 
 %%
-% The determinant of the 4 x 4 Wronskian W_2 is 12. As this is not 0, the matrix W_2 is invertible, so its columns are linearly independent. Therefore, the functions a(x), b(x), c(x), and d(x) are linearly independent.
+% The determinant of the 4 x 4 Wronskian W_2 is 12. As this is not 0, the matrix W_2 is invertible,
+% so its columns are linearly independent. Therefore, the functions a(x), b(x), c(x), and d(x)
+% are linearly independent.
 
 %%
 % _In the late 1800s, when the first modern analysis books were being
@@ -69,7 +71,9 @@ subs(D,x,-2)
 subs(D,x,2)
 
 %%
-% The determinant of the 2 x 2 Wronskian W_3 is 0. However, when substituting for x in the matrix D, the ratio of 4  to -4 is not the same as 4 to 4, so the multiple relating f(x) to g(x) is NOT the same for all real values of x. Therefore, f(x) and g(x) are linearly independent.
+% The determinant of the 2 x 2 Wronskian W_3 is 0. However, when substituting for x in the matrix D,
+% the ratio of 4  to -4 is not the same as 4 to 4, so the multiple relating f(x) to g(x) is NOT the same
+% for all real values of x. Therefore, f(x) and g(x) are linearly independent.
 
 %%
 % _Not part of the problem, but a nice follow-up: you can use the Wronskian

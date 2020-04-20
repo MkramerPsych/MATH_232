@@ -40,9 +40,7 @@ R = [2 0 0; 0 1 0; 0 0 3]; det(R*Q)
 S = Q; S(1,:) = S(1,:)+S(2,:); det(S)
 
 %%
-% The first, second, and last lines demonstrate the property that if one row of A is multiplied by k to produce B, then det(B) = k *det(A).  The third line demonstrates that a sqaure matrix is invertible iff its determinant is not equal to 0. The fourth line demonstrates that for a square matrix A, det(A)is equal to det(A'). The fifth line demonstrates the multiplicative property of determinants (det(A)*det(B)=det(AB)).  
-
-
+% The first line demonstrates that if one row of A is multiplied by k to produce B, then det(B) = k *det(A). The second line demonstrates that for two matrices A and B, det(AB) = det(A) * det(B). The third line demonstrates that det(A) = (-1)^r * product of pivots in U for a square matrix A, its reduced echelon form U, and the number of interchanges r it takes to go from A to U. The fourth line demonstrates that for a square matrix A, det(A) is equal to det(A'). The fifth line demonstrates the multiplicative property of determinants (det(A)*det(B)=det(AB)). The last line demonstrates that If a multiple of one row of A is added to another row to produce a matrix B, then det(B) = det(A).
 %%
 % _There's actually a small chance that one of the above will throw an
 % error when you uncomment it. *Which one, and why?*_

@@ -24,3 +24,9 @@ Max Kramer, Spring 2020
 
 ### Week 9 : Dimensionality
 - Includes : Week9Problem1.m
+
+### Week 10: Stochastic Matrices/Markov Chains
+- Includes : Week10Problem1.m, Week10Problem2.m, Week10Problem3.m
+
+### Week 11: Eigenvectors and Eigenvalues
+- Includes : Week11Problem1.m, Week11Problem2.m, Week11Problem3.m

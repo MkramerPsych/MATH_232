@@ -21,11 +21,15 @@ T3 = [ 1 0 -4 3; 0 1 0 -1]
 % are all 2-dimensional subspaces of R^4 by showing me a basis for each.*_
 
 A = T1(:,1:2)
+rref(A)
 B = T2
+rref(B)
+C_prep = rref(horzcat(T3,[0;0]))
 C = [4 -3;0 1;1 0;0 1]
+rref(C)
 
 %%
-% The first two columns of T1 are linearly independent and form a basis for Col(T1). Therefore, Col(T1) is 2 dimensional. Each column of T1 is comprised of 4 elements. By the basis theorem, Col(T1) is a 2 dimensional subspace of R^4. The two columns of T2 are linearly independent and form a basis for Col(T2). Therefore, Col(T2) is 2 dimensional. Each column of T2 is comprised of 4 elements. By the basis theorem, Col(T2) is a 2 dimensional subspace of R^4. By calculating the parametric vector form of T3 * x = 0, we find a basis for Nul(T3) that comprises of 2 linearly independent vectors with 4 elements each. By the basis theorem, Nul(T3) is a 2 dimensional subspace of R^4.
+% The first two columns of T1 are linearly independent and form a basis for Col(T1). Therefore, Col(T1) is 2 dimensional. Each column of T1 is comprised of 4 elements. By the basis theorem, Col(T1) is a 2 dimensional subspace of R^4. The two columns of T2 are linearly independent and form a basis for Col(T2). Therefore, Col(T2) is 2 dimensional. Each column of T2 is comprised of 4 elements. By the basis theorem, Col(T2) is a 2 dimensional subspace of R^4. To find a basis for Nul(T3), we row reduce the augmented system T3 * x = 0. We hand calculated the parametric vector form and found a general solution of two vectors C. C is comprised of 2 linearly independent vectors with 4 elements each. By the basis theorem, C is a 2 dimensional subspace of R^4.
 
 %%
 % _A, B, and C are all isomorphic -- geometrically, they're planes. 
