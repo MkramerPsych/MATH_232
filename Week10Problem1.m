@@ -23,11 +23,11 @@ rank(A)
 % for R^3. Lay Chapter 6 Theorem 4 says that the pivot columns of A form a
 % basis for R^3. *Find that basis, and call it B = [b1 b2 b3].*_
 
+rref(A)
 B = A(:,[1 2 5])
 
 %%
-% The pivot columns of A are 1, 2, and 5. The above command creates a
-% matrix B from the 1st, 2nd, and 5th columns of A. 
+% The pivot columns of A are 1, 2, and 5. The above command creates a matrix B from the 1st, 2nd, and 5th columns of A. 
 
 
 %%
@@ -36,13 +36,11 @@ B = A(:,[1 2 5])
 % way to do that: compose the matrix A with an appropriate change of
 % basis._
 
-C = B * A
-rref(C)
+C = B \ A
 rref(A)
 
 %%
-% The matrix C is a linear map from R^6 to R^3 created by composing the matrix A with a transformation matrix for the B-basis. 
-
+% The matrix C is a linear map from R^6 to R^3 created by composing the matrix A with the inverse of the change of basis matrix from the B basis to the standard basis. The result is a linear map from R^6 in the standard basis to R^3 in the B basis. 
 %%
 % _If you did the previous part right, then C = rref(A). (Wait, what!?!?!)
 % Actually, that's what row reduction is: it's a change of basis of the
@@ -61,10 +59,9 @@ K = [1 2 3 4; 4 5 6 7; 6 7 8 9]
 % R^3 and L takes the standard basis of R^4 to the M-basis of R^3.*_
  
 M = horzcat(K(:,[1 2]),[5;7;4])
-L = M * K;
-rref(L)
+rref(M)
+L = M \ K
 rref(K)
 
 %%
-% The matrix M is created by combining 2 vectors in Col(K) with a third linearly independent vector, creating a set of three linearly independent vectors with 3 elements each, forming the M basis for R^3. When M is multiplied by K, the resultant matrix L is row equivalent to rref(K). 
-
+% The matrix M is created by combining 2 vectors in Col(K) with a third linearly independent vector m3, testing by row reducing the resulting matrix. The columns of the matrix are linearly independent. Therefore, the set {m1,m2,m3} is a set of three linearly independent vectors with 3 elements each, forming the M basis for R^3. When the inverse of M is multiplied by K, the resultant matrix L is row equivalent to rref(K). 

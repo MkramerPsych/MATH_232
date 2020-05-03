@@ -60,6 +60,8 @@ for i = 1:10
     vec_prev = vec;
 end
 
+%%
+% The loop structure above begins with the vector v. On each run through the loop, the vector is multiplied by the matrix F and then divided by its norm to get the vector with a norm of 1. The code then checks if the length 1 vector is the same as the length 1 vector seen in the last iteration, and ends the loop if so. 
 
 %%
 % _Congratulations, you've found an eigenvector! And because it has norm

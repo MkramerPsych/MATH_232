@@ -30,3 +30,6 @@ Max Kramer, Spring 2020
 
 ### Week 11: Eigenvectors and Eigenvalues
 - Includes : Week11Problem1.m, Week11Problem2.m, Week11Problem3.m
+
+### Week 12: Orthogonality 
+- Includes: Week12Problem1.m, Week12Problem2.m, Week12Problem3.m
