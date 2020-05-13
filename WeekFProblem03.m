@@ -1,5 +1,5 @@
-%% Your Name Goes Here
-% Replace this with the Honor Code. Now is a very good time to reread the syllabus.
+%% Max Kramer
+% I affirm that I have adhered to the honor code on this assingment
 
 %%
 % _Hello again, scientist! I'll do all my writing in italics, and problems for you will be in *bold.*
@@ -17,6 +17,7 @@
 
 L = [0:.001:1.999]';
 analog = csvread('analog.csv');
+figure;
 plot(L,analog)
 
 %%
@@ -31,6 +32,11 @@ A = L(1:100); B = analog(1:100); B = B-mean(B); plot(A,B)
 %%
 % _*Find the period of the hum, then set k = 2*pi/period.*_
 
+k = 2*pi/(1/60)
+
+%%
+% The hum occurs at 60hz, so the period of the hum is 1/60. 
+
 %%
 % _*Find the function f(x) = a*cos(k*x) + b*sin(k*x) that best fits the
 % data [A B]. Plot it on the same axes as [A B] to confirm that it's a good
@@ -38,10 +44,49 @@ A = L(1:100); B = analog(1:100); B = B-mean(B); plot(A,B)
 % 6.6 Exercise 9 for inspiration; it's odd, so there's an answer in the
 % back._
 
+data = [A B];
+inputs = data(:,1); outputs = data(:,2);
+syms x;
+
+functioncoskx = cos(k*x);
+functionsinkx = sin(k*x);
+
+X = [subs(functioncoskx,x,inputs) subs(functionsinkx,x,inputs)]; 
+
+Xtx = X' * X;
+Xty = X' * outputs;
+
+b = Xtx^(-1) * Xty;
+
+f = [cos(k*x) sin(k*x)]*b;
+
+figure;
+scatter(data(:,1),data(:,2))
+hold on
+fplot(f, [0 0.1])
+
+%%
+% The functions cos(kx) and sin(kx) are represented as symbols. A standard
+% regression run on [A B] generates a vector b that contains the
+% coefficients on cos(kx) and sin(kx) that best fits the function to the
+% data. 
+
 %%
 % _*Create a new signal S by subtracting f(L) from analog, then plot L
 % against S.* If everything's gone right, you should have gotten rid of at
 % least 80% of the hum. Not bad. (We could do better with Fourier
 % transforms, but that's another topic for another course.)_
 
+fL = subs(f,x,L);
+
+S = analog - fL;
+
+figure;
+plot(L,S)
+
+%%
+% The function f(L) is created by using the subs command to evaluate the
+% function found previously for L. The resulting signal is subtracted from
+% analog to get S. L is then plotted against S in the graph below. 
+% It appears that the majority of the noise is gone. 
 

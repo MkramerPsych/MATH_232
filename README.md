@@ -33,3 +33,6 @@ Max Kramer, Spring 2020
 
 ### Week 12: Orthogonality 
 - Includes: Week12Problem1.m, Week12Problem2.m, Week12Problem3.m
+
+### Week 13: Final
+- Includes: WeekFProblem01.m -> WeekFProblem10.m

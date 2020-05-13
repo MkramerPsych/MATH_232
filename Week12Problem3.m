@@ -56,6 +56,7 @@ scatter3(C1(1,:),C1(2,:),C1(3,:));
 scatter3(C2(1,:),C2(2,:),C2(3,:));
 scatter3(C3(1,:),C3(2,:),C3(3,:));
 
+
 %%
 % I used the provided proj.m function to compute the action of each projection matrix on the standard basis for R^3. The resultant matrices, Projv1, Projv2, and Projv3 were then multiplied with C to get C1, C2, and C3. I then used the scatter3() function to show each matrix on the same axes. 
 
@@ -76,4 +77,21 @@ dot(v2,v3)
 % like, and said "that is the coolest shit!" aloud to nobody when I saw the
 % answer. view([0 0]) produces a particularly striking figure, but you
 % should look at it from other angles too!)_
+figure;
+scatter3(C(1,:),C(2,:),C(3,:));
+hold on
 
+ProjW = Projv2 + Projv3;
+CW = ProjW * C;
+scatter3(CW(1,:),CW(2,:),CW(3,:));
+
+CEW = (eye(3)-ProjW) * C;
+scatter3(CEW(1,:),CEW(2,:),CEW(3,:));
+
+view([0 0])
+
+%%
+% The projection matrix ProjW is created by adding together Projv2 and
+% Projv3. The projection matrices are then multiplied against C and plotted
+% on the same axes. View([0 0]) was used because Steve said it would look
+% cool, and it does.
